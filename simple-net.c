@@ -22,8 +22,8 @@
 #define MIN_DOUBLE -HUGE_VAL
 
 #define sqr(x)	((x)*(x))
-#define INPUT_FILENAME	"hw4_data.csv"
-#define TEST_DATA_FILE  "hw4_test_data.csv"
+#define INPUT_FILENAME	"quadrant_data.csv"
+#define TEST_DATA_FILE  "quadrant_test_data.csv"
 #define NUM_INPUT_VECTORS 800
 #define MAX_EPOCHS	1000
 #define MIN_ERROR	0.0050
@@ -291,6 +291,7 @@ int main(int argc, char *argv[]) {
 	int	numEpoch;
 	double	lastTrainingError,deltaErr;
 
+
 	int RandomizeTrainingSet=FALSE;
 
 	srand(time(0));
@@ -333,9 +334,11 @@ int main(int argc, char *argv[]) {
 	fclose(file);
 
 
-//	for(i=0;i<NUM_INPUT_VECTORS;i++) {
-//		printf("%d %d %lf %lf\n",tstincr[i][0],tstincr[i][1],tsttr[i][0],tsttr[i][1]);
-//	}
+	/*
+	for(i=0;i<NUM_INPUT_VECTORS;i++) {
+		printf("%d %d %lf %lf\n",tstincr[i][0],tstincr[i][1],tsttr[i][0],tsttr[i][1]);
+	}
+	*/
 
 	genNetwork(&Net);   		// Create the network
 	genRandomWeights(&Net);		// Fill it with random weights
